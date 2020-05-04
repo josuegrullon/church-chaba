@@ -71,7 +71,7 @@ freshly installed linux server you can use my shutdown script:
     ./shutdown-services.sh 
 
 
-###STEP 3.2 configure your chaba application.
+### STEP 3.2 configure your chaba application.
 Modify .env: set desired credentials for
 
     ICECAST_SOURCE_PASSWORD to authenticate audio streaming sources
@@ -82,6 +82,7 @@ Modify .env: set desired credentials for
 
     CHABA_CONGREGATION_USER for generating the chaba congregation user (the website user)
     CHABA_CONGREGATION_PASSWORD=for setting the chaba congregation password
+    
 Bring up the containers finally
 
     docker-compose up -d
@@ -91,7 +92,7 @@ Bring up the containers finally
     docker-compose run chaba php artisan key:generate
     docker-compose run chaba php artisan migrate
 
-## (optional) Step 5 install google fonts locally
+## Step 5 (optional) install google fonts locally
     mkdir  public/vendor/fonts
     npm install -g google-font-installer
     gfi download Nunito -d public/vendor/fonts
