@@ -4,6 +4,8 @@
 
 </p>
 
+<img src="App-Church-Service-Page.jpg" alt="drawing" width="200"/>
+
 ## About Chaba
 
 Chaba is an app supporting online expansion of 'church' in its broadest sense. It comprises 
@@ -40,5 +42,4 @@ If you discover a security vulnerability within chaba, please send a notificatio
 
 The Chaba online church app is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-![App-Church-Service-Page.jpg](App-Church-Service-Page.jpg)
-![App-Front-Page.jpg](App-Front-Page.jpg)
+ ![App-Church-Service-Page.jpg](App-Church-Service-Page.jpg) ![App-Front-Page.jpg](App-Front-Page.jpg)
