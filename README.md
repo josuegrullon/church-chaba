@@ -4,7 +4,8 @@
 
 </p>
 
-<img src="App-Church-Service-Page.jpg" alt="drawing" width="200"/>
+<img src="App-Church-Service-Page.jpg" alt="drawing" width="250"/> <img src="App-Front-Page.jpg" alt="drawing" width="250"/>
+
 
 ## About Chaba
 
@@ -41,5 +42,3 @@ If you discover a security vulnerability within chaba, please send a notificatio
 ## License
 
 The Chaba online church app is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-
- ![App-Church-Service-Page.jpg](App-Church-Service-Page.jpg) ![App-Front-Page.jpg](App-Front-Page.jpg)
