@@ -1,8 +1,7 @@
 <p align="left"><img src="not-found"  width="00"> TODO logo idea: ice-brick texture </p> 
 
 <p align="center">
-![App-Church-Service-Page.jpg](App-Church-Service-Page.jpg)
-![App-Front-Page.jpg](App-Front-Page.jpg)
+
 </p>
 
 ## About Chaba
@@ -40,3 +39,6 @@ If you discover a security vulnerability within chaba, please send a notificatio
 ## License
 
 The Chaba online church app is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+![App-Church-Service-Page.jpg](App-Church-Service-Page.jpg)
+![App-Front-Page.jpg](App-Front-Page.jpg)
