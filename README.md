@@ -56,6 +56,8 @@ The Chaba online church app is open-sourced software licensed under the [MIT lic
     sudo service docker restart
 
 ## STEP 2: install chaba and its dependancies  
+    Hint: for now installation must take place inside /var/www. Will be fixed soon
+    cd /var/www
     git clone https://github.com/dioniswe/chaba.git
     composer install
     npm install
@@ -98,5 +100,19 @@ Bring up the containers finally
     gfi download Nunito -d public/vendor/fonts
 
 
+# Usage
 
+Stream to your 'Radio'-Section using any icecast2 compatible client (i.e Butt). In settings use your server's domain 
+your configured port (default port 8008) and your configured source authentication key
+
+Stream to your 'Church-Service'-Section using any rtmp-compatible client (i.e OBS). In settings use your server's domain 
+your configured port (default port 8000) and your configured streaming key
+
+Chatting works straight
+
+For the recordings an admin user has been created on laravel initialization who is privileged to upload files.
+The congregation user is privileged to download and play files
+
+
+  
 
