@@ -4,7 +4,7 @@
 
 </p>
 
-<img src="App-Church-Service-Page.jpg" alt="drawing" width="250"/> &nbsp; &nbsp;  <img src="App-Front-Page.jpg" alt="drawing" width="250"/>
+<img src="App-Front-Page.jpg" alt="drawing" width="250"/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="App-Church-Service-Page.jpg" alt="drawing" width="250"/>   
 
 
 ## About Chaba
