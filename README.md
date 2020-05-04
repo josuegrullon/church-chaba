@@ -1,6 +1,8 @@
 <p align="left"><img src="not-found"  width="00"> TODO logo idea: ice-brick texture </p> 
 
 <p align="center">
+![App-Church-Service-Page.jpg](App-Church-Service-Page.jpg)
+![App-Front-Page.jpg](App-Front-Page.jpg)
 </p>
 
 ## About Chaba
