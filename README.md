@@ -24,8 +24,8 @@ Chaba is an app supporting online expansion of 'church' in its broadest sense. I
 ## Learning Chaba
 
 Take a look into the INSTALL.txt to get insight into installation routine. For an overview of reused packages take a look
- into the docker-compose.yml. For now, as the app is still in alpha state, developer resources will pe put into development
- first, befor writing a thorough documentation
+into the docker-compose.yml. For now, as the app is still in alpha state, developer resources will pe put into development
+first, befor writing a thorough documentation
 
 ## Contributing
 
@@ -42,3 +42,60 @@ If you discover a security vulnerability within chaba, please send a notificatio
 ## License
 
 The Chaba online church app is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+# Installation
+
+## STEP 1: prerequisite: install docker and docker-compose 
+    sudo apt-get update
+    sudo apt-get install docker.io
+    sudo systemctl start docker
+    sudo systemctl enable docker
+    sudo apt-get install docker-compose
+    sudo adduser your_user docker
+    sudo service docker restart
+
+## STEP 2: install chaba and its dependancies  
+    git clone https://github.com/dioniswe/chaba.git
+    composer install
+    npm install
+    sudo chown -R www-data:www-data .
+    npm run dev
+
+## STEP 3: configure and initialize application
+### STEP 3.1 prepare your server
+chaba occupies the ports 80 (nginx), 3306, 8000 (video-streaming), 8008 (icecast), 6379 (redis) and 6001 (laravel-echo) by default.
+Stop any other running applications listening on these ports or reconfigure chaba for using other ports. For common
+freshly installed linux server you can use my shutdown script:
+
+    ./shutdown-services.sh 
+
+
+###STEP 3.2 configure your chaba application.
+Modify .env: set desired credentials for
+
+    ICECAST_SOURCE_PASSWORD to authenticate audio streaming sources
+    ICECAST_MOUNT_NAME for the audio streaming url path
+
+    CHABA_ADMIN_USER for generating the chaba admin user (responsible for app contents of startpage and recordings)
+    CHABA_ADMIN_PASSWORD= for setting the chaba admin password
+
+    CHABA_CONGREGATION_USER for generating the chaba congregation user (the website user)
+    CHABA_CONGREGATION_PASSWORD=for setting the chaba congregation password
+Bring up the containers finally
+
+    docker-compose up -d
+
+## STEP 4 after building, initialize your laravel application
+
+    docker-compose run chaba php artisan key:generate
+    docker-compose run chaba php artisan migrate
+
+## (optional) Step 5 install google fonts locally
+    mkdir  public/vendor/fonts
+    npm install -g google-font-installer
+    gfi download Nunito -d public/vendor/fonts
+
+
+
+
