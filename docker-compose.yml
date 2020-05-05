@@ -9,7 +9,7 @@ services:
       dockerfile: ./docker/php/Dockerfile
     volumes:
       # TODO check, if possible to circumvent static path in docker-compose file
-      - .:/var/www/bibelkreis
+      - .:/var/www/chaba
       #- .docker/php-fpm.conf:/usr/local/etc/php-fpm.conf
       #- .docker/php.ini:/usr/local/etc/php/php.ini
       #- .:/var/www/html/
@@ -27,7 +27,7 @@ services:
       - chaba
     volumes:
       # TODO check, if possible to circumvent static path in docker-compose file
-      - .:/var/www/bibelkreis
+      - .:/var/www/chaba
       #- .:/var/www/html/:ro
       - ./docker/nginx/conf.d/:/etc/nginx/conf.d/
       - ./docker/nginx/ssl/:/etc/nginx/ssl/
@@ -50,7 +50,7 @@ services:
       - 3306:3306
     environment:
       MYSQL_DATABASE: ${DB_DATABASE}
-      MYSQL_USER: ${DB_USER}
+      MYSQL_USER: ${DB_USERNAME}
       MYSQL_PASSWORD: ${DB_PASSWORD}
       MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
     networks:
@@ -76,10 +76,11 @@ services:
       dockerfile: ./docker/php-cli/Dockerfile
     depends_on:
       - redis
-      - chabaa
+      - chaba
+    working_dir: /var/www/chaba
     volumes:
 # TODO check, if possible to circumvent static path in docker-compose file
-      - .:/var/www/bibelkreis
+      - .:/var/www/chaba
     restart: on-failure
     environment:
       CONTAINER_ROLE: queue
@@ -97,11 +98,11 @@ services:
     build:
       context: .
       dockerfile: docker/icecast/Dockerfile
-    working_dir: /var/www/bibelkreis
-    command: docker/icecast/start_modified.sh
+    working_dir: /var/www/chaba
+    command: /opt/start_modified.sh
     volumes:
       #- ./storage/logs/icecast:/var/log/icecast2
-      - /var/www/bibelkreis/docker/icecast/start_modified.sh/:/var/www/bibelkreis/docker/icecast/start_modified.sh:ro
+      - ./docker/icecast/start_modified.sh/:/opt/start_modified.sh:ro
       - /etc/localtime:/etc/localtime:ro
     environment:
       - ICECAST_SOURCE_PASSWORD=${ICECAST_SOURCE_PASSWORD}

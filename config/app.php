@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Freier Bibelkreis Allmannsweier'),
+    'name' => env('APP_NAME', 'Chaba Church and Bible Assembly'),
 
     /*
     |--------------------------------------------------------------------------

@@ -8,9 +8,12 @@
   "enter internal area": "Internen Bereich betreten",
   "Forgot Your Password?": "Passwort vergessen?",
   "greeting_text_part_1": "Herzlich Willkommen beim",
-  "greeting_text_part_2": "Freien Bibelkreis Allmannsweier"
-
-
-
-
+  "greeting_text_part_2": "Freien Bibelkreis Allmannsweier",
+  "Live-Service": "Live-Bibelkreis",
+  "Radio": "Radio",
+  "Library": "Bücherei",
+  "Chat": "Austausch",
+  "Recordings": "Aufnahmen",
+  "Calendar": "Termine",
+  "Upcoming": "Abkündigungen"
 }

@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Freier Bibelkreis Allmannsweier') }}</title>
+    <title>{{ config('app.name', 'Our church') }}</title>
 
     <!-- Scripts -->
 
@@ -38,7 +38,7 @@
                                 <i class="fas fa-church fa-3x"></i>
                             </div>
                             <div class="card-body">
-                                Live-Bibelkreis
+                                {{__('Live-Service')}}
                             </div>
                         </div>
                     </a>
@@ -50,7 +50,7 @@
                                 <i class="fas fa-broadcast-tower fa-3x"></i>
                             </div>
                             <div class="card-body">
-                                Radio
+                                {{__('Radio')}}
                             </div>
                         </div>
                     </a>
@@ -62,7 +62,7 @@
                                 <i class="fas fa-comments fa-3x"></i>
                             </div>
                             <div class="card-body">
-                                Austausch
+                                {{__('Chat')}}
                             </div>
                         </div>
                     </a>
@@ -74,7 +74,7 @@
                                 <i class="fas fa-photo-video fa-3x"></i>
                             </div>
                             <div class="card-body">
-                                Aufnahmen
+                                {{__('Recordings')}}
                             </div>
                         </div>
                     </a>
@@ -86,7 +86,7 @@
                                 <i class="fas fa-bible fa-3x"></i>
                             </div>
                             <div class="card-body">
-                                Bücherei
+                                {{__('Library')}}
                             </div>
                         </div>
                     </a>
@@ -98,7 +98,7 @@
                                 <i class="fas fa-calendar-alt fa-3x"></i>
                             </div>
                             <div class="card-body">
-                                Abkündigungen/<br>Termine
+                                {{__('Calendar')}}/<br>{{__('Upcoming')}}
                             </div>
                         </div>
                     </a>

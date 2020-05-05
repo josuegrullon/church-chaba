@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'enter' => 'Eintreten',
-    'internals' => 'interner Bereich',
-    'contact' => 'Kontakt aufnehmen',
-    'greeting_text' => 'Herzlich Willkommen beim Freien Bibelkreis Allmannsweier'
+    'enter' => 'Enter',
+    'internals' => 'Church area',
+    'contact' => 'Get in contact',
+    'greeting_text' => 'Welcome at our church'
 ];

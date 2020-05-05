@@ -126,7 +126,7 @@ return [
 
     'cookie' => env(
         'SESSION_COOKIE',
-        Str::slug(env('APP_NAME', 'bibelkreis'), '_').'_session'
+        Str::slug(env('APP_NAME', 'chaba'), '_').'_session'
     ),
 
     /*
