@@ -44,25 +44,24 @@ The Chaba online church app is open-sourced software licensed under the [MIT lic
 
 ## STEP 1: prerequisite: install docker and docker-compose 
     sudo apt-get update
-    sudo apt-get install docker.io
+    sudo apt-get install docker.io 
     sudo systemctl start docker
     sudo systemctl enable docker
     sudo apt-get install docker-compose
     sudo adduser your_user docker
     sudo service docker restart
+    sudo apt-get install npm nodejs
 
 ## STEP 2: install chaba and its dependancies  
-    Hint: for now installation must take place inside /var/www. Will be fixed soon
-    cd /var/www
+    cd /your/installation/directory
     git clone https://github.com/dioniswe/chaba.git
     composer install
     npm install
-    sudo chown -R www-data:www-data .
     npm run dev
 
 ## STEP 3: configure and initialize application
 ### STEP 3.1 prepare your server
-chaba occupies the ports 80 (nginx), 3306, 8000 (video-streaming), 8008 (icecast), 6379 (redis) and 6001 (laravel-echo) by default.
+chaba occupies the ports 80 (nginx), 8000 (video-streaming), 8008 (icecast), 6001 (laravel-echo websocket) by default.
 Stop any other running applications listening on these ports or reconfigure chaba for using other ports. For common
 freshly installed linux server you can use my shutdown script:
 
@@ -86,7 +85,7 @@ Bring up the containers finally
     docker-compose up -d
 
 ## STEP 4 after building, initialize your laravel application
-
+    sudo chown -R www-data:www-data .
     docker-compose run chaba php artisan key:generate
     docker-compose run chaba php artisan migrate
 
