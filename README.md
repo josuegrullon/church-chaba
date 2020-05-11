@@ -29,10 +29,10 @@ A pictured documentation is planned for navigating you through all of chaba's fe
 
 ## Contributing
 
-Thank you for considering contribution to the chaba online church app! 
-For an overview of reused packages take a look
-at the docker-compose.yml. For now, as the app is still in alpha state, developer resources will pe put into development
-first, before writing thorough documentation. For now the code is its own documentation.
+Thank you for considering contribution to the chaba online church app!   
+In brief chaba integrates a couple of free tools to make an app to aid churches
+in their digital struggle after corona lockdowns. For an overview of reused modules take a look
+at the docker-compose.yml.
 
 
 ## Security Vulnerabilities
