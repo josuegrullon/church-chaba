@@ -6,10 +6,14 @@
 
 <img src="App-Front-Page.jpg" alt="drawing" width="250"/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="App-Church-Service-Page.jpg" alt="drawing" width="250"/>   
 
+<img src="streaming-church-service-1.png" alt="drawing" width="250"/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="streaming-church-service-2.png" alt="drawing" width="250"/>   
+
 
 ## About Chaba
 
-Chaba is an app supporting expansion of 'church' into digital spheres. It comprises 
+Chaba (acr. for: chaba aids believer's assembly) is an app supporting churches to use digital capabilities for 
+their gatherings and cooperations.
+ It comprises 
 
 - streaming church services through common desktop and mobile web-browsers using hls (latency 15s) and 
    rtmp (flashvideo, with latency of 2s, but which has fewer browser compatibility).
@@ -17,8 +21,8 @@ Chaba is an app supporting expansion of 'church' into digital spheres. It compri
 - Chat area next to the streaming frames
 - file manager for up- and download of church service recordings and for in-browser playing of its contents
 - authentication of church members, administrators and guests
-- [Unfinished] Chat-App with User Management and user status management for encouraging communication between church memebers  
-- [Unfinished] Management of "calendar" and "About"-contents of the app 
+- [Upcoming] Chat-App with User Management and user status management for encouraging communication between church members  
+- [Upcoming] Management of "calendar" and "About"-contents of the app 
 
 ## Learning Chaba
 A pictured documentation is planned for navigating you through all of chaba's features 
@@ -28,7 +32,7 @@ A pictured documentation is planned for navigating you through all of chaba's fe
 Thank you for considering contribution to the chaba online church app! 
 For an overview of reused packages take a look
 at the docker-compose.yml. For now, as the app is still in alpha state, developer resources will pe put into development
-first, before writing thorough documentation. For now the code is its documentation itself.
+first, before writing thorough documentation. For now the code is its own documentation.
 
 
 ## Security Vulnerabilities
