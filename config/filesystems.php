@@ -70,7 +70,15 @@ return [
             'username' => env('SFTP_USER'),
             'password' => env('SFTP_PASSWORD'),
             'root' => env('SFTP_ROOT_DIRECTORY')
+        ],
+
+        'ftp' => [
+            'driver' => 'ftp',
+            'host' => env('FTP_HOST'),
+            'username' => env('FTP_USER'),
+            'password' => env('FTP_PASSWORD'),
         ]
+
     ],
 
     /*

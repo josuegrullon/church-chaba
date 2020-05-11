@@ -18,7 +18,7 @@ Chaba is an app supporting expansion of 'church' into digital spheres. It compri
 - file manager for up- and download of church service recordings and for in-browser playing of its contents
 - authentication of church members, administrators and guests
 - [Unfinished] Chat-App with User Management and user status management for encouraging communication between church memebers  
-- [Unfinished] Management of "calendar" and "About"-contents of the app  
+- [Unfinished] Management of "calendar" and "About"-contents of the app 
 
 ## Learning Chaba
 A pictured documentation is planned for navigating you through all of chaba's features 
@@ -42,51 +42,43 @@ The Chaba online church app is open-sourced software licensed under the [MIT lic
 
 # Installation
 
-## STEP 1: prerequisite: install docker and docker-compose 
-    sudo apt-get update
-    sudo apt-get install docker.io 
-    sudo systemctl start docker
-    sudo systemctl enable docker
-    sudo apt-get install docker-compose
-    sudo adduser your_user docker
-    sudo service docker restart
-    sudo apt-get install npm nodejs
+### Before you start
+chaba occupies the ports 80 (webserver), 8000 (for video-streaming), 8008 (for webradio), 6001 (for websocket-communication) 
+by default. Stop any other applications running on these ports or configure chaba for using other ports inside chabas .env file.
 
-## STEP 2: install chaba and its dependancies  
-    cd /your/installation/directory
-    git clone https://github.com/dioniswe/chaba.git
+## STEP 1: prerequisite: install docker, docker-compose, nodejs, npm and git 
+    sudo apt-get install docker-compose docker.io npm nodejs git
+    sudo adduser `whoami` docker
+    sudo systemctl enable docker
+    sudo service docker restart
+
+## STEP 2: install chaba and its dependencies
+    git clone https://github.com/dioniswe/chaba.git chaba
+    cd chaba
     composer install
     npm install
     npm run dev
 
-## STEP 3: configure and initialize application
-### STEP 3.1 prepare your server
-chaba occupies the ports 80 (nginx), 8000 (video-streaming), 8008 (icecast), 6001 (laravel-echo websocket) by default.
-Stop any other running applications listening on these ports or reconfigure chaba for using other ports. For common
-freshly installed linux server you can use my shutdown script:
-
-    ./shutdown-services.sh 
-
-
-### STEP 3.2 configure your chaba application.
-Modify .env: set desired credentials for
+### STEP 3 configure your chaba application.
+ 
+Modify .env: set values for
 
     ICECAST_SOURCE_PASSWORD to authenticate audio streaming sources
     ICECAST_MOUNT_NAME for the audio streaming url path
 
     CHABA_ADMIN_USER for generating the chaba admin user (responsible for app contents of startpage and recordings)
-    CHABA_ADMIN_PASSWORD= for setting the chaba admin password
+    CHABA_ADMIN_PASSWORD  for setting the chaba admin password
 
     CHABA_CONGREGATION_USER for generating the chaba congregation user (the website user)
-    CHABA_CONGREGATION_PASSWORD=for setting the chaba congregation password
+    CHABA_CONGREGATION_PASSWORD for setting the chaba congregation password
     
 Bring up the containers finally
 
     docker-compose up -d
 
-## STEP 4 after building, initialize your laravel application
-    sudo chown -R www-data:www-data .
+## STEP 4 after building, initialize your laravel application (as can be found in laravel quickstart guides)
     docker-compose run chaba php artisan key:generate
+    sudo chown -R www-data:www-data .
     docker-compose run chaba php artisan migrate
 
 ## Step 5 (optional) install google fonts locally
@@ -97,16 +89,16 @@ Bring up the containers finally
 
 # Usage
 
-Stream to your 'Radio'-Section using any icecast2 compatible client (i.e Butt). In settings use your server's domain 
-your configured port (default port 8008) and your configured source authentication key
+Stream to your 'Radio'-Section using any icecast2 compatible client (i.e Butt). In butt settings fill in your server's domain,
+your configured port (default port: 8008) and your configured source authentication key
 
-Stream to your 'Church-Service'-Section using any rtmp-compatible client (i.e OBS). In settings use your server's domain 
-your configured port (default port 8000) and your configured streaming key
+Stream to your 'Church-Service'-Section using any rtmp-compatible client (i.e OBS). In obs settings fill in your server's domain, 
+your configured port (default port: 8000) and your configured streaming key (default key: stream_name)
 
 Chatting works straight
 
-For the recordings an admin user has been created on laravel initialization who is privileged to upload files.
-The congregation user is privileged to download and play files
+For the recordings management an admin user has been created on laravel initialization who is privileged to upload files.
+The congregation user is privileged to download and play files.
 
 
   
