@@ -4,7 +4,7 @@
 
 </p>
 
-<img src="App-Front-Page.jpg" alt="drawing" width="250"/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="App-Church-Service-Page.jpg" alt="drawing" width="250"/>   
+<img src="presentation/mobile-front-page.jpg" alt="drawing" width="250"/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="presentation/mobile-church-service.jpg" alt="drawing" width="250"/>   
 
 <img src="streaming-church-service-1.png" alt="drawing" width="250"/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="streaming-church-service-2.png" alt="drawing" width="250"/>   
 
