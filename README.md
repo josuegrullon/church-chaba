@@ -4,9 +4,11 @@
 
 </p>
 
-<img src="presentation/mobile-front-page.jpg" alt="drawing" width="250"/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="presentation/mobile-church-service.jpg" alt="drawing" width="250"/>   
+<img src="presentation/mobile-front-page.jpg" alt="drawing" width="350"/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="presentation/mobile-church-service.jpg" alt="drawing" width="350"/>   
 
-<img src="presentation/streaming-church-service-1.png" alt="drawing" width="250"/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="presentation/streaming-church-service-2.png" alt="drawing" width="250"/>   
+<img src="presentation/streaming-church-service-1.png" alt="drawing" width="800"/>
+
+<img src="presentation/streaming-church-service-2.png" alt="drawing" width="800"/>   
 
 
 ## About Chaba
