@@ -87,17 +87,14 @@ services:
     networks:
       - mynet
 
-  ftp:
-    image: mauler/simple-ftp-server
-    environment:
-      FTP_USER:  ${FTP_USER}
-      FTP_PASS:  ${FTP_PASSWORD}
-    networks:
-      - mynet
-
   sftp:
     image: atmoz/sftp
-    command: foo:pass:1001
+    #volumes:
+      #- ./docker/sftp/upload:/home/foo/upload
+    # TODO bind mount instead of hosting in docker container
+    #command: ${SFTP_USER}:${SFTP_PASSWORD}:${SFTP_UID}
+    environment:
+      - SFTP_USERS=${SFTP_USER}:${SFTP_PASSWORD}:::upload
     networks:
       - mynet
 
@@ -119,7 +116,7 @@ services:
       - ICECAST_PASSWORD=${ICECAST_MOUNT_PASSWORD}
       - ICECAST_PORT=${ICECAST_PORT}
     ports:
-# TODO set icecast port correctly through environment variable into config
+    # TODO set icecast port correctly through environment variable into config
       - 8008:8008
     networks:
       - mynet

@@ -6,7 +6,7 @@
 @endsection
 
 @section('content')
-    <div class="container">
+    <div class="container" id="church-service" data-channel-prefix="{{config("database.redis.options.prefix")}}">
         <div class="row">
             <div class="col-lg-4">
                 <div class="chat-container">

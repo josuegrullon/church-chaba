@@ -69,7 +69,6 @@ return [
             'host' => env('SFTP_HOST'),
             'username' => env('SFTP_USER'),
             'password' => env('SFTP_PASSWORD'),
-            'root' => env('SFTP_ROOT_DIRECTORY')
         ],
 
         'ftp' => [
@@ -77,6 +76,12 @@ return [
             'host' => env('FTP_HOST'),
             'username' => env('FTP_USER'),
             'password' => env('FTP_PASSWORD'),
+
+             'port' => 21,
+             'root' => '',
+             'passive' => false,
+             'ssl' => false,
+            // 'timeout' => 30,
         ]
 
     ],

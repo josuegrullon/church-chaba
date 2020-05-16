@@ -25,7 +25,7 @@ return [
      * List of disk names that you want to use
      * (from config/filesystems)
      */
-    'diskList' => ['ftp'],
+    'diskList' => ['sftp'],
 
     /**
      * Default disk for left manager
@@ -153,17 +153,17 @@ return [
     'aclRules' => [
         /** guest access forbidden  (actually this has been achieved through auth middleware already) */
         null => [
-            ['disk' => 'ftp', 'path' => '*', 'access' => 0],
+            ['disk' => 'sftp', 'path' => '*', 'access' => 0],
         ],
 
         /** allow write access for admin user */
         1 => [
-            ['disk' => 'ftp', 'path' => '*', 'access' => 2],
+            ['disk' => 'sftp', 'path' => '*', 'access' => 2],
         ],
 
         /** allow read access for common church user */
         2 => [
-            ['disk' => 'ftp', 'path' => '*', 'access' => 2],
+            ['disk' => 'sftp', 'path' => '*', 'access' => 1],
         ],
     ],
 ];
