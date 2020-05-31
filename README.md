@@ -1,3 +1,5 @@
+Please note that chaba has been discontinued and is being closed soon. For further development the following repo is being used: https://github.com/dioniswe/chabaa .
+
 <p align="left"><img src="not-found"  width="00"> TODO logo idea: ice-brick texture </p> 
 
 <p align="center">
